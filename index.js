@@ -6,6 +6,7 @@ function PullDown()
   const currentList = document.getElementById("current-list")
 
   pullDownButton.addEventListener('mouseover', function(){
+    // style属性の「上書き」
     this.setAttribute("style", "background-color:#FFBEDA;")
   })
 
@@ -14,6 +15,7 @@ function PullDown()
   })
 
   pullDownButton.addEventListener('click', function(){
+    // style属性が 完全に "display:block;" と一致している場合のみtrue
     if (pullDownParents.getAttribute("style") == "display:block;")
     {
       pullDownParents.removeAttribute("style")
@@ -26,7 +28,7 @@ function PullDown()
 
   pullDownChild.forEach(function(list){
     list.addEventListener('click', function() {
-      // HTML要素の文字列を取得する
+      // クリックされたリスト項目のHTML要素の文字列を取得する
       const value = list.innerHTML
       currentList.innerHTML = value
     })
