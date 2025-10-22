@@ -37,6 +37,8 @@ function PullDown()
 // Webページが完全に読み込まれた瞬間に、PullDownという関数を実行する
 window.addEventListener('load', PullDown)
 
+
+
 function practice()
 {
   const name = "Tom"
@@ -93,4 +95,30 @@ function practice()
   human['address'] = 'Tokyo'
   console.log(human)
   human.talk()
+}
+
+
+
+class Sample
+{
+  static class_shared_data = 0;
+  // ここから
+  name;　// インスタンス変数（クラスのインスタンスごとに異なる値を持つことができる）
+  age = 20; // 初期値付きもOK
+  SetBasicInfo(name, age)
+  {
+    this.name = name
+    this.age = age
+  }
+  // ここまでは、以下５行と同義
+  // constructor(name, age)
+  // {
+  //   this.name = nane
+  //   this.age = age
+  // }
+  #secret = 1;
+  GetSecretValue()
+  {
+    return this.#secret;
+  }
 }
