@@ -129,6 +129,8 @@ class Sample
 
 export default Sample;
 // import Sample from './index';
+// export {Sample, SampleInherit}; 複数エクスポート・インポートすることもできる
+// import {Sample, SampleInherit} from './index';
 
 class SampleInherit extends Sample
 {
