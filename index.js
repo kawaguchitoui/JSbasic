@@ -126,3 +126,14 @@ class Sample
     return this.#secret;
   }
 }
+
+export default Sample;
+// import Sample from './index';
+
+class SampleInherit extends Sample
+{
+  constructor(name, age)
+  {
+    super(name, age); // constructorをオーバーライドしたら必ずsuper()が必要。
+  }
+}
