@@ -89,6 +89,10 @@ function practice()
     talk: function(){
       console.log(`私の名前は${human.name}`)
     }
+    // 同義
+    // talk: ()=>{
+    //   console.log(`私の名前は${human.name}`)
+    // }
   }
   console.log(human)
   human.age = 25
